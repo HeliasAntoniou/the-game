@@ -10,7 +10,8 @@ class Question(object):
 
         self.question = question
 
-        random_shuffle = shuffle([0, 1, 2, 3])
+        random_shuffle = [0, 1, 2, 3]
+        shuffle(random_shuffle)
 
         self.a1 = answers[random_shuffle[0]]
         self.a2 = answers[random_shuffle[1]]
@@ -23,3 +24,9 @@ class Question(object):
         answer = Question.answer_map[answer.upper()]
 
         return answer == self.correct_answer
+
+    def pretty_print(self):
+        print(self.question + ": " + ", ".join(["A: " + self.a1, "B: " + self.a2, "C: " + self.a3, "D: " + self.a4]))
+
+    def pretty_print50(self):
+        print("TODO")
