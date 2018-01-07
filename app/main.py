@@ -11,3 +11,8 @@ if __name__ == "__main__":
     for q in questions.ques:
         for p in persons:
             p.ask_question(q, questions.skip)
+
+    print()
+    print("Scoring time...")
+    for p in persons:
+        print(p.name + " : " + str(p.correct) + " / " + str(p.total))

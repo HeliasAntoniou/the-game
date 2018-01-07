@@ -39,6 +39,9 @@ class Person(object):
             elif name == "50":
                 if not self.used_50:
                     self.used_50 = True
+
+                    question.pretty_print50()
+                    name = None
                 else:
                     print("You cannot use 50-50 anymore!")
                     name = None
